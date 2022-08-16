@@ -14,6 +14,7 @@ namespace Blog.Data.Concrete
     {
         public UserRepository(DbContext dbContext) : base(dbContext)
         {
+            //
         }
     }
 }
