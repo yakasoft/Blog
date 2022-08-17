@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Blog.Shared.Entities.Abstract
 {
     public interface IEntity
-    {
+    {    // 
+        //
     }
 }
