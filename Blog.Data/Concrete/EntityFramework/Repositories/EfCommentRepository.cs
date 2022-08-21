@@ -7,12 +7,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Blog.Data.Concrete
+namespace Blog.Data.Concrete.EntityFramework.Repositories
 {
-    public class RoleRepository : EfEntityRepositoryBase<Role>, IRoleRepository
+    public class EfCommentRepository : EfEntityRepositoryBase<Comment>, ICommentRepository
     {
-        public RoleRepository(DbContext dbContext) : base(dbContext)
+        public EfCommentRepository(DbContext dbContext) : base(dbContext)
         {
         }
     }

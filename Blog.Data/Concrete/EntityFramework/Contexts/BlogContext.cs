@@ -17,7 +17,7 @@ namespace Blog.Data.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\localhost\SQLEXPRESS;Database=blog;Trusted_Connection=True;MultipleActiveResultSets=True");
         }
     }
 }
