@@ -8,7 +8,7 @@ namespace Blog.Shared.Entities.Abstract
 {
     public abstract class EntityBase
     {
-        public  virtual int Id { get; set; }
+        public virtual int Id { get; set; }
         public virtual DateTime CreatedDate { get; set; } = DateTime.Now;
         public virtual DateTime ModifieddDate { get; set; }
         public virtual bool IsDeleted { get; set; } = false;
