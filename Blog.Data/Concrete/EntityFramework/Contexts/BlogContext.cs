@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Blog.Data.Concrete.EntityFramework.Mappings;
 using Blog.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 namespace Blog.Data.Concrete.EntityFramework.Contexts
@@ -18,6 +19,15 @@ namespace Blog.Data.Concrete.EntityFramework.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\localhost\SQLEXPRESS;Database=blog;Trusted_Connection=True;MultipleActiveResultSets=True");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ArticleMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new CommentMap());
+            modelBuilder.ApplyConfiguration(new RoleMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
     }
 }
