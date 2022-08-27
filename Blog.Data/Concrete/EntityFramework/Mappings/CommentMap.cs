@@ -63,7 +63,7 @@ namespace Blog.Data.Concrete.EntityFramework.Mappings
             new Comment
             {
                 Id = 3,
-                ArticleId = 4,
+                ArticleId = 3,
                 Text = "Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir.",
                 IsActive = true,
                 IsDeleted = true,
